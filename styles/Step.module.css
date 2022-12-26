@@ -1,0 +1,40 @@
+.containerBig{
+    display: flex;
+    gap:1.3rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+.button{
+    width: 2.75rem;
+    height:2.75rem;
+    border-radius:50%;
+    border:1px solid var(--white);
+    background-color:transparent;
+    font-weight: 700;
+    font-size:18px;
+    color:var(--white);
+    padding-bottom:0.2rem;
+    transition: all 0.3s ease;
+}
+/* for active, not hover ! */
+.stepFocused{
+    background-color:var(--light-blue);
+    color:var(--marine-blue);
+    border-color:var(--light-blue);
+}
+
+
+.stepDescription{
+    color:var(--cool-gray);
+    font-size:16px;
+    font-weight:400;
+}
+
+.stepTitle{
+    color: var(--alabaster);
+    font-size:21px;
+}
+
+@media(min-width:950px){
+    
+}

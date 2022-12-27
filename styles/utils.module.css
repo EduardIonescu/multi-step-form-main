@@ -38,28 +38,6 @@
     border-color:var(--strawberry-red)!important;
 }
 
-.inputOne{
-    height:4rem;
-    width:600px;
-    border-radius:0.6rem;
-    border: 1px solid var(--light-gray);
-    padding:1.25rem;
-    transition:all 0.3s ease;
-    color:var(--marine-blue);
-    font-size:21px;
-    font-weight:500;
-}
-
-
-.inputOne::placeholder{
-    color:var(--cool-gray);
-    font-size:23px;
-}
-.inputOne:focus{
-    outline:none;
-    border-color:var(--purplish-blue);
-}
-
 .bottom{
     display: flex;
     justify-content: space-between;

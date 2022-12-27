@@ -22,20 +22,18 @@ export default function Home() {
 	function updateFormData(info) {
 		if (step == 1) {
 			setFormData({
+				...formData,
+				// Probably better to add each individual key:value of personalInfo but oh well
 				personalInfo: info,
-				planInfo: { ...formData.planInfo },
-				addOnsInfo: { ...formData.addOnsInfo },
 			});
 		} else if (step == 2) {
 			setFormData({
-				personalInfo: { ...formData.personalInfo },
+				...formData,
 				planInfo: info,
-				addOnsInfo: { ...formData.addOnsInfo },
 			});
 		} else if (step == 3) {
 			setFormData({
-				personalInfo: { ...formData.personalInfo },
-				planInfo: { ...formData.planInfo },
+				...formData,
 				addOnsInfo: info,
 			});
 		}

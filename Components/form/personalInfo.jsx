@@ -1,4 +1,5 @@
 import utilStyles from "../../styles/utils.module.css";
+import personalStyles from "../../styles/PersonalInfo.module.css";
 
 export default function PersonalInfo({
 	personalInfo,
@@ -52,9 +53,10 @@ export default function PersonalInfo({
 					<div className={utilStyles.labelContainer}>
 						<span>Name</span>
 						{getError(validForm.hasValidName)}
+						{console.log(validForm.hasValidName)}
 					</div>
 					<input
-						className={`${utilStyles.inputOne} ${
+						className={`${personalStyles.inputOne} ${
 							!validForm.hasValidName && utilStyles.containerError
 						}`}
 						type="text"
@@ -75,7 +77,7 @@ export default function PersonalInfo({
 						{getError(validForm.hasValidEmailAddress)}
 					</div>
 					<input
-						className={`${utilStyles.inputOne} ${
+						className={`${personalStyles.inputOne} ${
 							!validForm.hasValidEmailAddress &&
 							utilStyles.containerError
 						}`}
@@ -98,7 +100,7 @@ export default function PersonalInfo({
 						{getError(validForm.hasValidPhoneNumber)}
 					</div>
 					<input
-						className={`${utilStyles.inputOne} ${
+						className={`${personalStyles.inputOne} ${
 							!validForm.hasValidPhoneNumber &&
 							utilStyles.containerError
 						}`}

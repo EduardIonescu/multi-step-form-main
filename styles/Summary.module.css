@@ -1,0 +1,42 @@
+.containerSummary{
+    margin-top:3rem;
+    background-color:var(--alabaster);
+    padding:1.75rem 2rem;
+    border-radius:0.6rem;
+}
+
+.containerSeparate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonChange{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    text-decoration-line: underline;
+    font-size:19px;
+    color:var(--cool-gray);
+    font-weight:500;
+    transition: all 0.3s ease;
+}
+.buttonChange:hover{
+    color:var(--purplish-blue)
+}
+
+.lineBreak{
+    border:1px solid var(--light-gray);
+    border-bottom:none;
+    margin-top:2rem;
+}
+
+.addOnsName{
+    font-size: 19px;
+    color:var(--cool-gray);
+}
+
+.total{
+    color:var(--purplish-blue);
+    font-size: 26px;
+}

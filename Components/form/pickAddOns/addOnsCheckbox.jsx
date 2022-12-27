@@ -1,4 +1,5 @@
 import utilStyles from "../../../styles/utils.module.css";
+import checkboxStyles from "../../../styles/PickAddOns/addOnsCheckbox.module.css";
 
 export default function AddOnsCheckbox({
 	isChecked,
@@ -10,30 +11,30 @@ export default function AddOnsCheckbox({
 }) {
 	return (
 		<label
-			className={`${utilStyles.checkboxContainer} ${
-				isChecked && utilStyles.checkedContainer
+			className={`${checkboxStyles.checkboxContainer} ${
+				isChecked && checkboxStyles.checkedContainer
 			}`}
 		>
 			<input
 				type="checkbox"
-				className={utilStyles.checkboxInput}
+				className={checkboxStyles.checkboxInput}
 				defaultChecked={isChecked}
 				onChange={() => updateAddOns(title, isChecked)}
 			/>
-			<span className={utilStyles.checkboxSpan}></span>
-			<div className={utilStyles.checkboxText}>
+			<span className={checkboxStyles.checkboxSpan}></span>
+			<div className={checkboxStyles.checkboxText}>
 				<h3
-					className={`${utilStyles.colorText} ${utilStyles.checkboxTitle}`}
+					className={`${utilStyles.colorText} ${checkboxStyles.checkboxTitle}`}
 				>
 					{title}
 				</h3>
 				<p
-					className={`${utilStyles.description} ${utilStyles.checkboxDescription}`}
+					className={`${utilStyles.description} ${checkboxStyles.checkboxDescription}`}
 				>
 					{description}
 				</p>
 			</div>
-			<p className={utilStyles.checkboxPrice}>
+			<p className={checkboxStyles.checkboxPrice}>
 				+${price}
 				{yearly ? "0/yr" : "/mo"}
 			</p>

@@ -1,16 +1,16 @@
-import utilStyles from "../../../styles/utils.module.css";
+import toggleStyles from "../../../styles/SelectPlan/ToggleButton.module.css";
 
 export default function ToggleButton({ yearly, onToggle }) {
 	return (
-		<label className={utilStyles.toggleLabel} htmlFor="toggleYearly">
+		<label className={toggleStyles.toggleLabel} htmlFor="toggleYearly">
 			<input
 				type="checkbox"
 				id="toggleYearly"
 				defaultChecked={yearly}
 				onClick={onToggle}
-				className={utilStyles.toggleInput}
+				className={toggleStyles.toggleInput}
 			/>
-			<span className={utilStyles.toggleSpan} />
+			<span className={toggleStyles.toggleSpan} />
 		</label>
 	);
 }

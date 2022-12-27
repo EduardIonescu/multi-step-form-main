@@ -47,10 +47,10 @@ export default function PersonalInfo({
 				</legend>
 				<label
 					htmlFor="name"
-					className={`${utilStyles.label} ${utilStyles.colorText}`}
+					className={`${personalStyles.label} ${utilStyles.colorText}`}
 				>
 					{" "}
-					<div className={utilStyles.labelContainer}>
+					<div className={personalStyles.labelContainer}>
 						<span>Name</span>
 						{getError(validForm.hasValidName)}
 						{console.log(validForm.hasValidName)}
@@ -69,10 +69,10 @@ export default function PersonalInfo({
 				</label>
 				<label
 					htmlFor="email"
-					className={`${utilStyles.label} ${utilStyles.colorText}`}
+					className={`${personalStyles.label} ${utilStyles.colorText}`}
 				>
 					{" "}
-					<div className={utilStyles.labelContainer}>
+					<div className={personalStyles.labelContainer}>
 						<span>Email Address</span>
 						{getError(validForm.hasValidEmailAddress)}
 					</div>
@@ -91,11 +91,11 @@ export default function PersonalInfo({
 				<label
 					htmlFor="name"
 					className={`
-					${utilStyles.label}
+					${personalStyles.label}
 					 ${utilStyles.colorText}`}
 				>
 					{" "}
-					<div className={utilStyles.labelContainer}>
+					<div className={personalStyles.labelContainer}>
 						<span>Phone Number</span>
 						{getError(validForm.hasValidPhoneNumber)}
 					</div>

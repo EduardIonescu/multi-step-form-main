@@ -1,6 +1,6 @@
 import utilStyles from "../../styles/utils.module.css";
+import formStyles from "../../styles/Form.module.css";
 import { useState } from "react";
-import Image from "next/image";
 import PersonalInfo from "./personalInfo";
 import SelectPlan from "./selectPlan/selectPlan";
 import PickAddOns from "./pickAddOns/pickAddOns";
@@ -114,13 +114,13 @@ export default function Form({
 						}}
 					/>
 				)}
-				<div className={utilStyles.bottom}>
+				<div className={formStyles.bottom}>
 					<button
 						type="button"
 						className={
 							step >= 2
-								? utilStyles.buttonGoBack
-								: utilStyles.firstPage
+								? formStyles.buttonGoBack
+								: formStyles.firstPage
 						}
 						onClick={handleGoBack}
 					>
@@ -128,8 +128,8 @@ export default function Form({
 					</button>
 					<button
 						type="submit"
-						className={`${utilStyles.bottomButton} ${
-							step == 4 && utilStyles.buttonConfirm
+						className={`${formStyles.bottomButton} ${
+							step == 4 && formStyles.buttonConfirm
 						}`}
 					>
 						{step == 4 ? "Confirm" : "Next Step"}

@@ -1,0 +1,17 @@
+
+.sectionThankYou{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
+.articleThankYou{
+    text-align: center;
+    width:580px;
+    margin-left:0.6rem;
+}
+.margins{
+    margin-bottom:1.2rem;
+    margin-top: 2.2rem;
+}

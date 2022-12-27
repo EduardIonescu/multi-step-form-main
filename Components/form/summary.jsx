@@ -1,4 +1,5 @@
 import utilStyles from "../../styles/utils.module.css";
+import summaryStyles from "../../styles/Summary.module.css";
 
 export default function Summary({ formData, toggleYearly }) {
 	const cardOptionToName = ["Arcade", "Advanced", "Pro"];
@@ -29,8 +30,8 @@ export default function Summary({ formData, toggleYearly }) {
 				Double-check everything looks OK before confirming.
 			</p>
 
-			<article className={utilStyles.containerSummary}>
-				<div className={utilStyles.containerSeparate}>
+			<article className={summaryStyles.containerSummary}>
+				<div className={summaryStyles.containerSeparate}>
 					<div>
 						<h3
 							className={`${utilStyles.colorText} ${utilStyles.fontSize}`}
@@ -40,7 +41,7 @@ export default function Summary({ formData, toggleYearly }) {
 						<button
 							type="button"
 							onClick={toggleYearly}
-							className={utilStyles.buttonChange}
+							className={summaryStyles.buttonChange}
 						>
 							Change
 						</button>
@@ -52,13 +53,13 @@ export default function Summary({ formData, toggleYearly }) {
 						{pricePerTimeframe}
 					</h3>
 				</div>
-				<hr className={utilStyles.lineBreak} />
+				<hr className={summaryStyles.lineBreak} />
 				{activeAddOns.map((addOn, i) => (
 					<li
-						className={`${utilStyles.containerSeparate} ${utilStyles.marginTop15rem}`}
+						className={`${summaryStyles.containerSeparate} ${utilStyles.marginTop15rem}`}
 						key={i}
 					>
-						<p className={utilStyles.addOnsName}>{addOn}</p>
+						<p className={summaryStyles.addOnsName}>{addOn}</p>
 						<p
 							className={`${utilStyles.fontSize19} ${utilStyles.colorText}`}
 						>
@@ -71,12 +72,14 @@ export default function Summary({ formData, toggleYearly }) {
 			</article>
 			<article
 				className={`
-				${utilStyles.containerSeparate} 
+				${summaryStyles.containerSeparate} 
 				${utilStyles.marginTop15rem} 
 				${utilStyles.paddingSides2rem}`}
 			>
-				<p className={utilStyles.addOnsName}>Total ({perTimeframe})</p>
-				<h2 className={utilStyles.total}>
+				<p className={summaryStyles.addOnsName}>
+					Total ({perTimeframe})
+				</p>
+				<h2 className={summaryStyles.total}>
 					+${totalPrice}
 					{pricePerTimeframe}
 				</h2>

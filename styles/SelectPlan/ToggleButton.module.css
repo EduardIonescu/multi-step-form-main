@@ -1,0 +1,37 @@
+/* TOGGLE button shenanigans*/
+.toggleLabel{
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.toggleInput{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSpan{
+    position: absolute;
+    cursor: pointer;
+    inset:0;
+    background-color: var(--marine-blue);
+    transition:0.3s;
+    border-radius:2rem;
+}
+.toggleSpan::before{
+    position: absolute;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    left:0.4rem;
+    bottom:0.4rem;
+    background-color: var(--white);
+    border-radius:50%;
+    transition: 0.3s;
+}
+
+.toggleInput:checked + .toggleSpan::before{
+    transform:translateX(1.5rem);
+}

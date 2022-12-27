@@ -1,10 +1,11 @@
 import utilStyles from "../../styles/utils.module.css";
+import thankYouStyles from "../../styles/ThankYou.module.css";
 import Image from "next/image";
 
 export default function ThankYou() {
 	return (
-		<section className={utilStyles.sectionThankYou}>
-			<article className={utilStyles.articleThankYou}>
+		<section className={thankYouStyles.sectionThankYou}>
+			<article className={thankYouStyles.articleThankYou}>
 				<Image
 					src="/images/icon-thank-you.svg"
 					alt=""
@@ -13,7 +14,7 @@ export default function ThankYou() {
 					height={108}
 				/>
 				<h1
-					className={`${utilStyles.title} ${utilStyles.colorText} ${utilStyles.margins}`}
+					className={`${utilStyles.title} ${utilStyles.colorText} ${thankYouStyles.margins}`}
 				>
 					Thank you!
 				</h1>

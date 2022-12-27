@@ -1,4 +1,5 @@
 import utilStyles from "../../../styles/utils.module.css";
+import selectPlanStyles from "../../../styles/SelectPlan/SelectPlan.module.css";
 
 import Image from "next/image";
 import ToggleButton from "./toggleButton";
@@ -32,7 +33,7 @@ export default function SelectPlan({ selectPlanInfo, setSelectPlanInfo }) {
 				<legend className={utilStyles.description}>
 					You have the option of monthly or yearly billing.
 				</legend>
-				<ul className={utilStyles.optionsContainer}>
+				<ul className={selectPlanStyles.optionsContainer}>
 					{cards.map((card, index) => (
 						<li key={card}>
 							<input
@@ -44,11 +45,11 @@ export default function SelectPlan({ selectPlanInfo, setSelectPlanInfo }) {
 								defaultChecked={
 									selectPlanInfo.cardOption == index
 								}
-								className={utilStyles.planOption}
+								className={selectPlanStyles.planOption}
 							/>
 							<label
 								htmlFor={`${card}`}
-								className={utilStyles.planLabel}
+								className={selectPlanStyles.planLabel}
 							>
 								<Image
 									className={utilStyles.marginBottom35rem}
@@ -80,11 +81,11 @@ export default function SelectPlan({ selectPlanInfo, setSelectPlanInfo }) {
 					))}
 				</ul>
 
-				<div className={utilStyles.monthlyYearly}>
+				<div className={selectPlanStyles.monthlyYearly}>
 					<p
 						className={`${
 							!selectPlanInfo.timeframe && utilStyles.colorText
-						} ${utilStyles.description} `}
+						} ${selectPlanStyles.description} `}
 					>
 						Monthly
 					</p>
@@ -95,7 +96,7 @@ export default function SelectPlan({ selectPlanInfo, setSelectPlanInfo }) {
 					<p
 						className={`${
 							selectPlanInfo.timeframe && utilStyles.colorText
-						} ${utilStyles.description} `}
+						} ${selectPlanStyles.description} `}
 					>
 						Yearly
 					</p>

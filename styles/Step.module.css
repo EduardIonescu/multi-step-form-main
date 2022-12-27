@@ -1,19 +1,9 @@
-.containerBig{
-    display: flex;
-    gap:1.3rem;
-    align-items: center;
-    margin-bottom: 2.5rem;
-}
 .button{
-    width: 2.75rem;
-    height:2.75rem;
     border-radius:50%;
     border:1px solid var(--white);
     background-color:transparent;
     font-weight: 700;
-    font-size:18px;
     color:var(--white);
-    padding-bottom:0.2rem;
     transition: all 0.3s ease;
 }
 /* for active, not hover ! */
@@ -23,18 +13,43 @@
     border-color:var(--light-blue);
 }
 
-
-.stepDescription{
-    color:var(--cool-gray);
-    font-size:16px;
-    font-weight:400;
+@media(max-width:1299px){
+    .button{
+        width: 2rem;
+        height:2rem;
+        font-size:14px;
+        padding-bottom:0.1rem;
+    }
+    .stepDescription{
+        display: none;
+    }
+    .stepTitle{
+        display: none;
+    }
 }
+@media(min-width:1300px){
+    .containerBig{
+        display: flex;
+        gap:1.3rem;
+        align-items: center;
+        margin-bottom: 2.5rem;
+    }
 
-.stepTitle{
-    color: var(--alabaster);
-    font-size:21px;
-}
+    .button{
+        width: 2.75rem;
+        height:2.75rem;
+        font-size:18px;
+        padding-bottom:0.2rem;
+    }
 
-@media(min-width:950px){
+    .stepDescription{
+        color:var(--cool-gray);
+        font-size:16px;
+        font-weight:400;
+    }
     
+    .stepTitle{
+        color: var(--alabaster);
+        font-size:21px;
+    }
 }

@@ -32,43 +32,80 @@ html, body{
 
 body{
     display: flex;
-    align-items: center;
     justify-content: center;
     background-color: var(--magnolia);
 }
 
 main{
     background-color:var(--white);
-    height:800px;
-    width:1255px;
-    border-radius:1.5rem;
-    padding:1.4rem;
     display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 aside{
-    height:100%;
-    background-image: url("/images/bg-sidebar-desktop.svg");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
-    width:365px;
-    min-width:365px;
-    border-radius:1rem;
-    padding: 3.15rem 2.5rem;
 }
 
 form{
-    padding: 3.1rem 113px 3.1rem 135px;
-    position: relative;
     height:100%;
     width:100%;
 }
 
-legend{
-    margin-bottom: 3.1rem;
-}
-
 li{
     list-style: none;
+}
+
+@media(max-width:1299px){
+    body{
+        position: relative;
+    }
+    main{
+        width:345px;
+        border-radius:0.8rem;
+        margin-top:6.25rem;
+        padding:2rem 1.5rem;
+    }
+    aside{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap:1rem;
+        padding-top:2rem;
+        height:10.8rem;
+        width:100%;
+        min-width:100%;
+        background-image: url("/images/bg-sidebar-mobile.svg");
+        position: absolute;
+        top:0;
+        left:0;
+        z-index:-1;
+    }
+}
+@media(min-width:1300px){
+    body{
+        align-items: center;
+    }
+    main{
+        height:800px;
+        width:1255px;
+        border-radius:1.5rem;
+        padding:1.4rem;
+    }
+    aside{
+        padding: 3.15rem 2.5rem;
+        height:100%;
+        width:365px;
+        min-width:365px;
+        border-radius:1rem;
+        background-image: url("/images/bg-sidebar-desktop.svg");
+    }
+    form{
+        position: relative;
+        padding: 3.1rem 113px 3.1rem 135px;
+    }
+    legend{
+        margin-bottom: 3.1rem;
+    }
 }

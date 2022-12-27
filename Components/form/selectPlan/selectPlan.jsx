@@ -52,15 +52,17 @@ export default function SelectPlan({ selectPlanInfo, setSelectPlanInfo }) {
 								className={selectPlanStyles.planLabel}
 							>
 								<Image
-									className={utilStyles.marginBottom35rem}
+									className={`${utilStyles.marginBottom35rem} ${selectPlanStyles.image}`}
 									src={`/images/icon-${card}.svg`}
-									width={54}
-									height={54}
+									width={40}
+									height={40}
 									alt=""
 									aria-hidden="true"
 								/>
 								<div>
-									<h2 className={utilStyles.colorText}>
+									<h2
+										className={`${utilStyles.colorText} ${selectPlanStyles.titleMobile}`}
+									>
 										{card.toUpperCase()}
 									</h2>
 									<p className={utilStyles.price}>
@@ -70,7 +72,7 @@ export default function SelectPlan({ selectPlanInfo, setSelectPlanInfo }) {
 									</p>
 									{selectPlanInfo.timeframe && (
 										<p
-											className={`${utilStyles.colorText} ${utilStyles.mdDescription}`}
+											className={`${utilStyles.colorText} ${selectPlanStyles.mdDescription}`}
 										>
 											2 months free
 										</p>

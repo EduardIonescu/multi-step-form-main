@@ -2,16 +2,12 @@
 .toggleLabel{
     position: relative;
     display: inline-block;
-    width: 52px;
-    height: 28px;
 }
-
 .toggleInput{
     opacity: 0;
     width: 0;
     height: 0;
 }
-
 .toggleSpan{
     position: absolute;
     cursor: pointer;
@@ -23,15 +19,38 @@
 .toggleSpan::before{
     position: absolute;
     content: "";
-    height: 1rem;
-    width: 1rem;
-    left:0.4rem;
-    bottom:0.4rem;
     background-color: var(--white);
     border-radius:50%;
     transition: 0.3s;
 }
 
-.toggleInput:checked + .toggleSpan::before{
-    transform:translateX(1.5rem);
+@media(max-width:1299px){
+    .toggleLabel{
+        width: 2.5rem;
+        height: 1.30rem;
+    }
+    .toggleSpan::before{
+        height: 0.8rem;
+        width: 0.8rem;
+        left:0.25rem;
+        bottom:0.25rem;
+    }
+    .toggleInput:checked + .toggleSpan::before{
+        transform:translateX(1.2rem);
+    }
+}
+@media(min-width:1300px){
+    .toggleLabel{
+        width: 52px;
+        height: 28px;
+    }
+    .toggleSpan::before{
+        height: 1rem;
+        width: 1rem;
+        left:0.4rem;
+        bottom:0.4rem;
+    }
+    .toggleInput:checked + .toggleSpan::before{
+        transform:translateX(1.5rem);
+    }
 }

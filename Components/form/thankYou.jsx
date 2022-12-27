@@ -7,11 +7,12 @@ export default function ThankYou() {
 		<section className={thankYouStyles.sectionThankYou}>
 			<article className={thankYouStyles.articleThankYou}>
 				<Image
+					className={thankYouStyles.imageThankYou}
 					src="/images/icon-thank-you.svg"
 					alt=""
 					aria-hidden="true"
-					width={108}
-					height={108}
+					width={56}
+					height={56}
 				/>
 				<h1
 					className={`${utilStyles.title} ${utilStyles.colorText} ${thankYouStyles.margins}`}

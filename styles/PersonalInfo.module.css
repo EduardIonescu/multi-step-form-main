@@ -2,9 +2,6 @@
     display: flex;
     flex-direction: column;
     font-weight:500;
-    font-size:19px;
-    gap:0.6rem;
-    margin-bottom:1.8rem;
 }
 
 .labelContainer{
@@ -13,22 +10,62 @@
 }
 
 .inputOne{
-    height:4rem;
-    width:600px;
-    border-radius:0.6rem;
     border: 1px solid var(--light-gray);
-    padding:1.25rem;
     transition:all 0.3s ease;
     color:var(--marine-blue);
-    font-size:21px;
-    font-weight:500;
 }
 
 .inputOne::placeholder{
     color:var(--cool-gray);
-    font-size:23px;
+    
 }
 .inputOne:focus{
     outline:none;
     border-color:var(--purplish-blue);
+}
+
+@media(max-width:1299px){
+    .label{
+        font-size:12px;
+        margin-bottom:0.8rem;
+        gap:0.3rem;
+    }
+    .label:first-of-type{
+        margin-top:1.2rem;
+    }
+    .label:last-of-type{
+        margin:0;
+    }
+    .inputOne{
+        width:100%;
+        height:2.5rem;
+        padding:0 1rem;
+        border-radius:0.3rem;
+        font-weight:700;
+    }
+    
+    .inputOne::placeholder{
+        font-size:14px;
+        font-weight:700;
+    }
+
+}
+
+@media(min-width:1300px){
+    .label{
+        font-size:19px;
+        margin-bottom:1.8rem;
+        gap:0.6rem;
+    }
+    .inputOne{
+        width:600px;
+        height:4rem;
+        padding:1.25rem;
+        border-radius:0.6rem;
+        font-size:21px;
+        font-weight:500;
+    }
+    .inputOne::placeholder{
+        font-size:23px;
+    }
 }

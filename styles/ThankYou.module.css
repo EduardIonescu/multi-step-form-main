@@ -1,4 +1,3 @@
-
 .sectionThankYou{
     display: flex;
     align-items: center;
@@ -8,10 +7,27 @@
 
 .articleThankYou{
     text-align: center;
-    width:580px;
-    margin-left:0.6rem;
 }
-.margins{
-    margin-bottom:1.2rem;
-    margin-top: 2.2rem;
+
+@media(max-width:1299px){
+    .sectionThankYou{
+        padding:3rem 0;
+    }
+    .margins{
+        margin-top:1.2rem;
+    }
+}
+@media(min-width:1300px){
+    .imageThankYou{
+        width:108px;
+        height:108px;
+    }
+    .articleThankYou{
+        width:580px;
+     margin-left:0.6rem;
+    }
+    .margins{
+        margin-bottom:1.2rem;
+        margin-top: 2.2rem;
+    }
 }

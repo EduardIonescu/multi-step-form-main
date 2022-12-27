@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import Step from "../Components/step";
 import Form from "../Components/form/form";
 import { useState } from "react";

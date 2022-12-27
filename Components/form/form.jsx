@@ -81,7 +81,7 @@ export default function Form({
 
 	if (step != 5)
 		return (
-			<form onSubmit={handleSubmit} className={utilStyles.relative}>
+			<form onSubmit={handleSubmit}>
 				{step == 1 && (
 					<PersonalInfo
 						personalInfo={personalInfo}

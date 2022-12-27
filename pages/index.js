@@ -72,8 +72,6 @@ export default function Home() {
 						);
 					})}
 				</aside>
-				{console.log(step)}
-				{console.table(formData)}
 				<Form
 					step={step}
 					setStep={setStep}

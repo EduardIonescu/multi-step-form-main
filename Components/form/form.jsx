@@ -5,6 +5,12 @@ import PersonalInfo from "./personalInfo";
 import SelectPlan from "./selectPlan/selectPlan";
 import PickAddOns from "./pickAddOns/pickAddOns";
 import Summary from "./summary";
+import ThankYou from "./thankYou";
+import {
+	nameRegex,
+	emailRegex,
+	phoneNumberRegex,
+} from "../../constants/regex/regexConstants";
 
 export default function Form({
 	step,
@@ -33,7 +39,6 @@ export default function Form({
 		e.preventDefault();
 		if (step == 1) {
 			formValidation();
-			updateFormData(personalInfo);
 		} else if (step == 2) {
 			updateFormData(selectPlanInfo);
 		} else if (step == 3) {
@@ -42,9 +47,6 @@ export default function Form({
 
 		if (step != 1) {
 			setStep((s) => s + 1);
-		} else {
-			Object.values(validForm).every((value) => value == true) &&
-				setStep((s) => s + 1);
 		}
 	}
 	function handleGoBack() {
@@ -54,30 +56,37 @@ export default function Form({
 	}
 
 	function formValidation() {
-		const nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
-		const emailRegex = /(\w\.?)+@[\w\.-]+\.\w{2,}/;
-		const phoneNumberRegex = /\(?(\d{3})\)?[-\.\s]?(\d{3})[-\.\s]?(\d{4})/;
-
-		const hasValidName = nameRegex.test(personalInfo.name);
-		const hasValidEmailAddress = emailRegex.test(personalInfo.email);
-		const hasValidPhoneNumber = phoneNumberRegex.test(
+		let hasValidName = nameRegex.test(personalInfo.name);
+		let hasValidEmailAddress = emailRegex.test(personalInfo.email);
+		let hasValidPhoneNumber = phoneNumberRegex.test(
 			personalInfo.phoneNumber
 		);
+		if (personalInfo.name == "") hasValidName = undefined;
+		if (personalInfo.email == "") hasValidEmailAddress = undefined;
+		if (personalInfo.phoneNumber == "") hasValidPhoneNumber = undefined;
 		setValidForm({
 			hasValidName,
 			hasValidEmailAddress,
 			hasValidPhoneNumber,
 		});
+		if (
+			[hasValidName, hasValidEmailAddress, hasValidPhoneNumber].every(
+				(value) => value == true
+			)
+		) {
+			updateFormData(personalInfo);
+			setStep((s) => s + 1);
+		}
 	}
 
 	if (step != 5)
 		return (
 			<form onSubmit={handleSubmit} className={utilStyles.relative}>
-				{console.table(validForm)}
 				{step == 1 && (
 					<PersonalInfo
 						personalInfo={personalInfo}
 						setPersonalInfo={setPersonalInfo}
+						validForm={validForm}
 					/>
 				)}
 				{step == 2 && (
@@ -128,29 +137,5 @@ export default function Form({
 				</div>
 			</form>
 		);
-	else {
-		return (
-			<section className={utilStyles.sectionThankYou}>
-				<article className={utilStyles.articleThankYou}>
-					<Image
-						src="/images/icon-thank-you.svg"
-						alt=""
-						aria-hidden="true"
-						width={108}
-						height={108}
-					/>
-					<h1
-						className={`${utilStyles.title} ${utilStyles.colorText} ${utilStyles.margins}`}
-					>
-						Thank you!
-					</h1>
-					<p className={utilStyles.description}>
-						Thanks for confirming your subscription! We hope you
-						have fun using our platform. If you ever need support,
-						please feel free to email us at support@loremgaming.com.
-					</p>
-				</article>
-			</section>
-		);
-	}
+	else return <ThankYou />;
 }

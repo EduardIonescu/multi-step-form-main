@@ -1,6 +1,10 @@
 import utilStyles from "../../styles/utils.module.css";
 
-export default function PersonalInfo({ personalInfo, setPersonalInfo }) {
+export default function PersonalInfo({
+	personalInfo,
+	setPersonalInfo,
+	validForm,
+}) {
 	function handleNameChange(e) {
 		setPersonalInfo({
 			...personalInfo,
@@ -20,6 +24,17 @@ export default function PersonalInfo({ personalInfo, setPersonalInfo }) {
 		});
 	}
 
+	function getError(validator) {
+		if (!validator)
+			return (
+				<span className={utilStyles.error}>
+					{validator === undefined
+						? "This field is required"
+						: "Invalid format"}
+				</span>
+			);
+	}
+
 	return (
 		<>
 			<h1 className={`${utilStyles.title} ${utilStyles.colorText}`}>
@@ -36,12 +51,12 @@ export default function PersonalInfo({ personalInfo, setPersonalInfo }) {
 					{" "}
 					<div className={utilStyles.labelContainer}>
 						<span>Name</span>
-						<span className={utilStyles.error}>
-							This field is required
-						</span>
+						{getError(validForm.hasValidName)}
 					</div>
 					<input
-						className={utilStyles.inputOne}
+						className={`${utilStyles.inputOne} ${
+							!validForm.hasValidName && utilStyles.containerError
+						}`}
 						type="text"
 						value={personalInfo.name}
 						onChange={handleNameChange}
@@ -57,12 +72,13 @@ export default function PersonalInfo({ personalInfo, setPersonalInfo }) {
 					{" "}
 					<div className={utilStyles.labelContainer}>
 						<span>Email Address</span>
-						<span className={utilStyles.error}>
-							This field is required
-						</span>
+						{getError(validForm.hasValidEmailAddress)}
 					</div>
 					<input
-						className={utilStyles.inputOne}
+						className={`${utilStyles.inputOne} ${
+							!validForm.hasValidEmailAddress &&
+							utilStyles.containerError
+						}`}
 						type="email"
 						value={personalInfo.email}
 						onChange={handleEmailChange}
@@ -79,12 +95,13 @@ export default function PersonalInfo({ personalInfo, setPersonalInfo }) {
 					{" "}
 					<div className={utilStyles.labelContainer}>
 						<span>Phone Number</span>
-						<span className={utilStyles.error}>
-							This field is required
-						</span>
+						{getError(validForm.hasValidPhoneNumber)}
 					</div>
 					<input
-						className={`${utilStyles.inputOne} ${utilStyles.containerError}`}
+						className={`${utilStyles.inputOne} ${
+							!validForm.hasValidPhoneNumber &&
+							utilStyles.containerError
+						}`}
 						type="tel"
 						placeholder="e.g. +1 234 567 890"
 						value={personalInfo.phoneNumber}

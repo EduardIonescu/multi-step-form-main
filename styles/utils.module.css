@@ -23,22 +23,6 @@
     margin-top:0.1rem;
 }
 
-.fontSize21{
-    font-size:21px;
-}
-
-.fontSize19{
-    font-size:19px;
-}
-
-.marginTop15rem{
-    margin-top: 1.5rem;
-}
-
-.paddingSides2rem{
-    padding:0 2rem;
-}
-
 @media(max-width:1299px){
     .title{
         font-size:24px;

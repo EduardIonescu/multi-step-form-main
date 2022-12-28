@@ -18,7 +18,7 @@ export default function PickAddOns({ addOns, setAddOns, yearly }) {
 		{
 			isChecked: addOns["Customizable profile"],
 			title: "Customizable profile",
-			description: "Custom theme on profile",
+			description: "Custom theme on your profile",
 			price: 2,
 		},
 	];

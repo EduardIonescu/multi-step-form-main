@@ -11,12 +11,14 @@ export default function AddOnsCheckbox({
 }) {
 	return (
 		<label
+			htmlFor={`${title}`}
 			className={`${checkboxStyles.checkboxContainer} ${
 				isChecked && checkboxStyles.checkedContainer
 			}`}
 		>
 			<input
 				type="checkbox"
+				id={`${title}`}
 				className={checkboxStyles.checkboxInput}
 				defaultChecked={isChecked}
 				onChange={() => updateAddOns(title, isChecked)}

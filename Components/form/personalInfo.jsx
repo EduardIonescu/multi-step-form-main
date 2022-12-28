@@ -63,6 +63,7 @@ export default function PersonalInfo({
 						value={personalInfo.name}
 						onChange={handleNameChange}
 						placeholder="e.g. Stephen King"
+						id="name"
 						name="name"
 						maxLength={32}
 					/>
@@ -85,11 +86,12 @@ export default function PersonalInfo({
 						value={personalInfo.email}
 						onChange={handleEmailChange}
 						placeholder="e.g. stephenking@lorem.com"
+						id="email"
 						name="email"
 					/>
 				</label>
 				<label
-					htmlFor="name"
+					htmlFor="phoneNumber"
 					className={`
 					${personalStyles.label}
 					 ${utilStyles.colorText}`}
@@ -108,8 +110,8 @@ export default function PersonalInfo({
 						placeholder="e.g. +1 234 567 890"
 						value={personalInfo.phoneNumber}
 						onChange={handlePhoneNumberChange}
-						name="name"
-						maxLength={32}
+						id="phoneNumber"
+						name="phoneNumber"
 					/>
 				</label>
 			</fieldset>

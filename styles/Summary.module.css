@@ -1,7 +1,5 @@
 .containerSummary{
-    margin-top:3rem;
     background-color:var(--alabaster);
-    padding:1.75rem 2rem;
     border-radius:0.6rem;
 }
 
@@ -16,7 +14,6 @@
     border:none;
     cursor: pointer;
     text-decoration-line: underline;
-    font-size:19px;
     color:var(--cool-gray);
     font-weight:500;
     transition: all 0.3s ease;
@@ -28,15 +25,83 @@
 .lineBreak{
     border:1px solid var(--light-gray);
     border-bottom:none;
-    margin-top:2rem;
 }
 
 .addOnsName{
-    font-size: 19px;
     color:var(--cool-gray);
 }
 
 .total{
     color:var(--purplish-blue);
-    font-size: 26px;
+}
+
+@media(max-width:1299px){
+    .containerSummary{
+        margin-top:1.5rem;
+        padding:1rem;
+        margin-bottom:1.3rem;
+    }
+    .buttonChange{
+        font-size:15px;
+    }
+    .fontSize21{
+        font-size:16px;
+    }
+    .fontSize19{
+        font-size:14px;
+        font-weight:500;
+    }
+    .addOnsName{
+        font-size: 14px;
+        font-weight:500;
+    }
+
+    .lineBreak{
+        margin-top:0.75rem;
+    }
+
+    .total{
+        font-size: 15px;
+        font-weight:700;
+    }
+
+    .marginTop15rem{
+        margin-top: 0.8rem;
+    }
+    .paddingSides2rem{
+        padding:0 1rem;
+    }
+}
+@media(min-width:1300px){
+    .containerSummary{
+        margin-top:3rem;
+        padding:1.75rem 2rem;
+    }
+    .buttonChange{
+        font-size:19px;
+    }
+    .fontSize21{
+        font-size:21px;
+    }
+    .fontSize19{
+        font-size:19px;
+    }
+    .addOnsName{
+        font-size: 19px;
+    }
+
+    .lineBreak{
+        margin-top:2rem;
+    }
+
+    .total{
+        font-size: 26px;
+    }
+
+    .marginTop15rem{
+        margin-top: 1.5rem;
+    }
+    .paddingSides2rem{
+        padding:0 2rem;
+    }
 }

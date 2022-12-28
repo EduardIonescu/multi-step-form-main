@@ -43,12 +43,20 @@ Users should be able to:
 
 ### What I learned
 
+In this project I've practiced React and how to manage State when it holds and sets nested objects and arrays. I've used CSS Modules to style my components, which was quite difficult at first, but it ended up making the whole project more manageable and easier to structure. The same can be said about structuring my Components.
+I've also practiced how to create a Form and throw errors on invalid input in React. It was probably not the best way, but I made it work.
+
 ### Continued development
+
+-   Continue learning React and Nextjs.
+-   Work with API's and databases in React.
+-   Learn React Form Hook and try it in practice.
+-   I am quite thrilled to try a styling framework like MaterialUI or TailwindCSS
 
 ### Useful resources
 
--   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+-   [React Docs BETA](https://beta.reactjs.org/) - This helped me learn standard for React and how to better manage State and Props.
+-   [NextJS Docs](https://nextjs.org/learn/foundations/about-nextjs) - This taught me how to use NextJS and how to somewhat structure it's folders and files.
 
 ## Author
 

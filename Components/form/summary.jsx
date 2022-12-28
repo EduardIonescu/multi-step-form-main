@@ -34,7 +34,7 @@ export default function Summary({ formData, toggleYearly }) {
 				<div className={summaryStyles.containerSeparate}>
 					<div>
 						<h3
-							className={`${utilStyles.colorText} ${utilStyles.fontSize}`}
+							className={`${utilStyles.colorText} ${summaryStyles.fontSize21}`}
 						>
 							{cardName} ({timeframe})
 						</h3>
@@ -47,7 +47,7 @@ export default function Summary({ formData, toggleYearly }) {
 						</button>
 					</div>
 					<h3
-						className={`${utilStyles.colorText}  ${utilStyles.fontSize21}`}
+						className={`${utilStyles.colorText}  ${summaryStyles.fontSize21}`}
 					>
 						${cardPrice}
 						{pricePerTimeframe}
@@ -56,12 +56,12 @@ export default function Summary({ formData, toggleYearly }) {
 				<hr className={summaryStyles.lineBreak} />
 				{activeAddOns.map((addOn, i) => (
 					<li
-						className={`${summaryStyles.containerSeparate} ${utilStyles.marginTop15rem}`}
+						className={`${summaryStyles.containerSeparate} ${summaryStyles.marginTop15rem}`}
 						key={i}
 					>
 						<p className={summaryStyles.addOnsName}>{addOn}</p>
 						<p
-							className={`${utilStyles.fontSize19} ${utilStyles.colorText}`}
+							className={`${summaryStyles.fontSize19} ${utilStyles.colorText}`}
 						>
 							{addOn == "Online service"
 								? `+$1${pricePerTimeframe}`
@@ -73,8 +73,8 @@ export default function Summary({ formData, toggleYearly }) {
 			<article
 				className={`
 				${summaryStyles.containerSeparate} 
-				${utilStyles.marginTop15rem} 
-				${utilStyles.paddingSides2rem}`}
+				${summaryStyles.marginTop15rem} 
+				${summaryStyles.paddingSides2rem}`}
 			>
 				<p className={summaryStyles.addOnsName}>
 					Total ({perTimeframe})

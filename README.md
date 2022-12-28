@@ -43,9 +43,9 @@ Users should be able to:
 
 ### What I learned
 
--In this project I've practiced React and how to manage State when it holds and sets nested objects and arrays. I've used CSS Modules to style my components, which was quite difficult at first, but it ended up making the whole project more manageable and easier to structure. The same can be said about structuring my Components.
--I've also practiced how to create a Form and throw errors on invalid input in React. It was probably not the best way, but I made it work.
--How to deploy a Nextjs app using Vercel.
+-   In this project I've practiced React and how to manage State when it holds and sets nested objects and arrays. I've used CSS Modules to style my components, which was quite difficult at first, but it ended up making the whole project more manageable and easier to structure. The same can be said about structuring my Components.
+-   I've also practiced how to create a Form and throw errors on invalid input in React. It was probably not the best way, but I made it work.
+-   How to deploy a Nextjs app using Vercel.
 
 ### Continued development
 
